@@ -23,5 +23,10 @@ def t_media(media_muestral,media_poblacional,std_muestral,n):
     p=t.cdf(t_critico,df=n-1)
     print(f"El valor de t es {t_critico}\n el valor de p= {p}")
     return t_critico,p
-
+def error_estandar_2_poblaciones(s1,s2,n1,n2):
+    se_diff = ((s1**2 / n1) + (s2**2 / n2))**0.5
+    print(f"El error estándar de la diferencia de medias es: {se_diff}")
+    
+    return se_diff
+error_estandar_2_poblaciones(36982.7,23427.3,40125,10268)
 #N=z_proporcion(529,1400,0.4)
